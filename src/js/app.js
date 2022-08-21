@@ -1,10 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.css';
-// import './plugins';
+import './plugins';
 // import 'bootstrap/dist/js/bootstrap.min.js';
 // import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import * as bootstrap from 'bootstrap';
+// import * as bootstrap from 'bootstrap';
 import '../css/style.css';
-import 'bootstrap';
 
 import UI from './config/ui.config';
 import { validate } from './helpers/validate';
@@ -17,14 +16,14 @@ const { form, inputEmail, inputPassword } = UI;
 const inputs = [inputEmail, inputPassword];
 
 // Events
-form.addEventListener('submit', e => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   onSubmit();
 });
 
 inputs.forEach((input) => {
   input.addEventListener('focus', () => {
-    removeInputError(input)
+    removeInputError(input);
   });
 });
 
@@ -33,21 +32,23 @@ async function onSubmit() {
   const isValidForm = inputs.every((el) => {
     const isValidInput = validate(el);
     if (!isValidInput) {
-      showinputError(el)
+      showinputError(el);
     }
     return isValidInput;
   });
+
   console.log(isValidForm);
+
   if (!isValidForm) return;
 
   try {
-    await login(inputEmail.value, inputPassword.value)
+    await login(inputEmail.value, inputPassword.value);
     await getNews();
     form.reset();
     // notify({ msg: ' login success!', className: 'alert-danger', timeout: 1000 })
-    notify({ msg: ' login success!', className: 'alert-success' })
+    notify({ msg: ' login success!', className: 'alert-success' });
   } catch (error) {
-    notify({ msg: ' login faild!', className: 'alert-danger' })
+    notify({ msg: ' login faild!', className: 'alert-danger' });
   }
 }
 // notify({ msg: ' text', className: 'alert-danger' })
@@ -56,16 +57,16 @@ async function onSubmit() {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  const triggerTabList = document.querySelectorAll('#myTab button')
+});
 
-  console.log(triggerTabList);
+let x = 5;
+++x;
+console.log(x);
 
-  triggerTabList.forEach(triggerEl => {
-    const tabTrigger = new bootstrap.Tab(triggerEl)
+const obj = {
+  name: 'artem',
+};
 
-    triggerEl.addEventListener('click', event => {
-      event.preventDefault()
-      tabTrigger.show()
-    })
-  })
-})
+const { name } = obj;
+
+console.log(name);

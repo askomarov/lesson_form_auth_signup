@@ -1,4 +1,4 @@
-import axios from "../plugins/axios";
+import axios from '../plugins/axios';
 
 export async function getNews() {
   try {
@@ -7,6 +7,6 @@ export async function getNews() {
     return response.data;
   } catch (error) {
     console.log(error);
-    return Promise.reject(error)
+    return Promise.reject(error);
   }
 }

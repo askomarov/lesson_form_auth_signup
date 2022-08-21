@@ -13,11 +13,11 @@
 }
 
 .login-form-wrap .form-card .card-title {
-  color: var(--gray);
+  color: var(--gray, #c4c4c4);
 }
 
 .login-greeting-screen {
-  background: var(--teal);
+  background: var(--bs-teal);
   width: 50%;
   padding: 20px;
 }

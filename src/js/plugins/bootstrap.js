@@ -1,20 +1,20 @@
 import * as bootstrap from 'bootstrap';
 
 function initTabs() {
-  const triggerTabList = document.querySelectorAll('#myTab button')
+  const triggerTabList = document.querySelectorAll('#myTab button');
 
   console.log(triggerTabList);
 
-  triggerTabList.forEach(triggerEl => {
-    const tabTrigger = new bootstrap.Tab(triggerEl)
+  triggerTabList.forEach((triggerEl) => {
+    const tabTrigger = new bootstrap.Tab(triggerEl);
 
-    triggerEl.addEventListener('click', event => {
-      event.preventDefault()
-      tabTrigger.show()
-    })
-  })
+    triggerEl.addEventListener('click', (event) => {
+      event.preventDefault();
+      tabTrigger.show();
+    });
+  });
 }
 
 // initTabs();
 
-// export default initTabs;
+export default initTabs;

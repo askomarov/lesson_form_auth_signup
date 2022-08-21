@@ -1,7 +1,7 @@
 function inputErrorTemplate(msg) {
   return `
   <div class="invalid-feedback">${msg}</div>
-  `
+  `;
 }
 
 /**
@@ -18,7 +18,7 @@ export function showinputError(el) {
 
   const template = inputErrorTemplate(msg);
   el.classList.add('is-invalid');
-  parent.insertAdjacentHTML('beforeend', template)
+  parent.insertAdjacentHTML('beforeend', template);
 }
 /**
  *
@@ -30,5 +30,5 @@ export function removeInputError(el) {
   if (!err) return;
 
   el.classList.remove('is-invalid');
-  parent.removeChild(err)
+  parent.removeChild(err);
 }

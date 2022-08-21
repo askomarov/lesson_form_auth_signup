@@ -1,4 +1,4 @@
-import axios from "../plugins/axios";
+import axios from '../plugins/axios';
 
 /**
  * Function login. Make login request to API
@@ -8,11 +8,11 @@ import axios from "../plugins/axios";
 
 export async function login(email, password) {
   try {
-    const response = await axios.post(`/auth/login`, JSON.stringify({ email, password }));
+    const response = await axios.post('/auth/login', JSON.stringify({ email, password }));
     console.log(response);
     return response.data;
   } catch (error) {
     console.log(error);
-    return Promise.reject(error)
+    return Promise.reject(error);
   }
 }
