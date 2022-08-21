@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import axios from '../plugins/axios';
 
 /**
@@ -6,7 +7,7 @@ import axios from '../plugins/axios';
  * @param {String} password
  */
 
-export async function login(email, password) {
+export default async function login(email, password) {
   try {
     const response = await axios.post('/auth/login', JSON.stringify({ email, password }));
     console.log(response);

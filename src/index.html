@@ -44,10 +44,93 @@
           </div>
         </div>
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-          <form action="" id="registration-form">
-            <h3> Registration form</h3>
-
-          </form>
+          <div class="form-card card ml-auto">
+            <div class="card-body">
+              <h4 class="card-title">Registration</h4>
+              <form action="" id="signup-form">
+                <!-- email -->
+                <div class="form-group mb-3">
+                  <label for="reg-email">Email address</label>
+                  <input type="email" class="form-control" id="reg-email" aria-describedby="emailHelp"
+                    placeholder="Enter email" data-required="email"
+                    data-invalid-message="Please provide valid email example@example.com" />
+                </div>
+                <!-- pass -->
+                <div class="form-group mb-3">
+                  <label for="reg-password">Password</label>
+                  <input type="password" class="form-control" id="reg-password" placeholder="Password"
+                    data-required="password" />
+                </div>
+                <!-- firstname -->
+                <div class="form-group mb-3">
+                  <label for="firstname">Name</label>
+                  <input type="text" class="form-control" id="firstname" placeholder="Firstname"
+                    data-required="firstname" data-invalid-message="Please use only english letters, min 4" />
+                </div>
+                <!-- lastname -->
+                <div class="form-group mb-3">
+                  <label for="lastname">Lastame</label>
+                  <input type="text" class="form-control" id="lastname" placeholder="Lastname" data-required="firstname"
+                    data-invalid-message="Please use only english letters, min 4" />
+                </div>
+                <!-- nickname -->
+                <div class="form-group mb-3">
+                  <label for="nickname">Nickname</label>
+                  <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" id="nickname" placeholder="Nickname" aria-label="nickname"
+                      data-required="firstname" data-invalid-message="Please use only english letters, min 4"
+                      aria-describedby="basic-addon1">
+                  </div>
+                </div>
+                <!-- phone number -->
+                <div class="form-group mb-3">
+                  <label for="phone">Phone number</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="123-456-7890" data-required="phone"
+                    autocomplete="off" data-invalid-message="Please use such format 123-456-7890" />
+                </div>
+                <!-- gender_orientation -->
+                <fieldset class="form-group mb-3 d-flex gap-4" id="gender_orientation">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender_orientation" id="male">
+                    <label class="form-check-label" for="male">
+                      male
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender_orientation" id="female" checked>
+                    <label class="form-check-label" for="female">
+                      female
+                    </label>
+                  </div>
+                </fieldset>
+                <!-- country  -->
+                <div class="form-group mb-3">
+                  <label for="counrty-datalist" class="form-label">Enter your country</label>
+                  <input class="form-control" list="counrty-list" id="counrty-datalist" placeholder="Type to search..."
+                    autocomplete="off">
+                  <datalist id="counrty-list">
+                    <!-- <option value="Serbia"> -->
+                  </datalist>
+                </div>
+                <!-- city -->
+                <div class="form-group mb-3">
+                  <label for="city-datalist" class="form-label">Enter your city</label>
+                  <input class="form-control" disabled list="city-list" id="city-datalist"
+                    placeholder="Type to search..." autocomplete="off">
+                  <datalist id="city-list">
+                    <!-- <option value="San Francisco"> -->
+                  </datalist>
+                </div>
+                <!-- birthday -->
+                <div class="form-group mb-3">
+                  <label for="birthdate">Start</label>
+                  <input id="birthdate" class="form-control" type="date" />
+                </div>
+                <button type="submit" class="btn btn-primary">Signup</button>
+              </form>
+            </div>
+          </div>
         </div>
 
       </div>
