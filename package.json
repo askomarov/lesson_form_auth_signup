@@ -19,6 +19,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^3.1.0",
     "eslint": "^8.22.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -44,14 +45,15 @@
     "bootstrap": "^5.2.0",
     "prettier": "^2.7.1"
   },
-  "husky":{
-    "hooks":{
+  "husky": {
+    "hooks": {
       "pre-commit": "lint-staged"
     }
   },
-  "lint-staged":{
-    "*.js":[
-      "npm run lint:fix", "git add"
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:fix",
+      "git add"
     ]
   }
 }
