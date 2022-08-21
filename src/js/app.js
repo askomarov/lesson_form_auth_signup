@@ -61,12 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 let x = 5;
 ++x;
-console.log(x);
+console.log(x)
 
 const obj = {
   name: 'artem',
 };
-
-const { name } = obj;
-
-console.log(name);
